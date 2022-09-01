@@ -103,9 +103,9 @@ public class RegistrationForm extends JDialog {
       if (addedRows > 0) {
         persona = new Persona();
         persona.nombre = nombre;
+        persona.apellido = apellido;
         persona.email = email;
         persona.telefono = telefono;
-        persona.apellido = apellido;
         persona.contraseña = contraseña;
       }
 
