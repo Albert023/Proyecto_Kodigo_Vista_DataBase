@@ -8,7 +8,7 @@ public class Cuenta extends Cliente {
 
   @Setter @Getter private int numCuenta;
 
-  public Cuenta(double saldo, int numCuenta, Cliente cliente, Persona persona) {
+  public Cuenta(double saldo, int numCuenta, Persona persona) {
     super(persona);
     this.saldo = saldo;
     this.numCuenta = numCuenta;

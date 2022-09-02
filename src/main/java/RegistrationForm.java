@@ -26,14 +26,16 @@ public class RegistrationForm extends JDialog {
     super(parent);
     setTitle("Crear una nueva cuenta");
     setContentPane(registerPanel);
-    setMinimumSize(new Dimension(450, 474));
+    setMinimumSize(new Dimension(500, 550));
     setModal(true);
     setLocationRelativeTo(parent);
+    setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
     btnRegistrar.addActionListener(new ActionListener() {
       @Override
       public void actionPerformed(ActionEvent e) {
         registrarCliente();
+
       }
     });
     btnCancelar.addActionListener(new ActionListener() {
@@ -64,6 +66,9 @@ public class RegistrationForm extends JDialog {
       return;
     }
 
+    String codigo ="12345";
+    String codigoEmail = JOptionPane.showInputDialog("Digite el codigo que se envio a su correo");
+    if(codigo.equals(codigoEmail))
     persona = AgregarClienteBaseDeDatos(nombre,apellido,email,telefono,contraseña);
 
     if (persona != null) {
@@ -74,6 +79,7 @@ public class RegistrationForm extends JDialog {
       JOptionPane.showMessageDialog(this,
               "Fallo al registrar el cliente", "Prueba de nuevo", JOptionPane.ERROR_MESSAGE);
     }
+
   }
 
   public Persona persona;

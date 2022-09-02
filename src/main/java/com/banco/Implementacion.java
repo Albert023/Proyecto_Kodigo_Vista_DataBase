@@ -29,8 +29,8 @@ public class Implementacion {
       }
     }
 
-    Cuenta cuenta1 = new Cuenta(saldo, 34555123, cliente1, persona1);
-    Cuenta cuenta2 = new Cuenta(saldo, 45555123, cliente1, persona1);
+    Cuenta cuenta1 = new Cuenta(saldo, 34555123, persona1);
+    Cuenta cuenta2 = new Cuenta(saldo, 45555123, persona1);
     bandera = false;
     while (!bandera) {
       System.out.println(
